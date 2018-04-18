@@ -36,24 +36,23 @@
           <section class="filter">
             <h2 class="visually-hidden">Фильтр по каталог</h2>
             <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
-              <fieldset class="filter__form__fieldset">
-                <legend class="filter__form__legend">стоимость:</legend>
-              </fieldset>
+              <span class="sort__column__name">Стоимость:</span>
+
 
               <fieldset class="filter__form__fieldset">
                 <legend class="filter__form__legend">сетка:</legend>
                 <ul class="filter__form__list greed_option">
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option__checkbox" type="checkbox" name="adaptive" id="adaptive" checked>
-                    <label class="filter__form__option__label" for="adaptive">Адаптивная</label>
+                    <input class="visually-hidden filter__form__option_radio" type="radio" name="adaptive" id="adaptive" checked>
+                    <label class="filter__form__option__label_radio" for="adaptive">Адаптивная</label>
                   </li>
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option__checkbox" type="checkbox" name="fix" id="fix">
-                    <label class="filter__form__option__label" for="fix">Фиксированная</label>
+                    <input class="visually-hidden filter__form__option_radio" type="radio" name="fix" id="fix">
+                    <label class="filter__form__option__label_radio" for="fix">Фиксированная</label>
                   </li>
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option__checkbox" type="checkbox" name="gum" id="gum">
-                    <label class="filter__form__option__label" for="gum">Резиновая</label>
+                    <input class="visually-hidden filter__form__option_radio" type="radio" name="gum" id="gum">
+                    <label class="filter__form__option__label_radio" for="gum">Резиновая</label>
                   </li>
                 </ul>
               </fieldset>
@@ -62,24 +61,24 @@
                 <legend class="filter__form__legend">особенности:</legend>
                 <ul class="filter__form__list features_option">
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option__checkbox" type="checkbox" name="slider" id="slider" checked>
-                    <label class="filter__form__option__label" for="slider">Слайдер</label>
+                    <input class="visually-hidden filter__form__option_checkbox" type="checkbox" name="slider" id="slider" checked>
+                    <label class="filter__form__option__label_checkbox" for="slider">Слайдер</label>
                   </li>
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option__checkbox" type="checkbox" name="advantage" id="advantage">
-                    <label class="filter__form__option__label" for="advantage">Блок преимуществ</label>
+                    <input class="visually-hidden filter__form__option_checkbox" type="checkbox" name="advantage" id="advantage">
+                    <label class="filter__form__option__label_checkbox" for="advantage">Блок преимуществ</label>
                   </li>
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option__checkbox" type="checkbox" name="news" id="news" checked>
-                    <label class="filter__form__option__label" for="news">Новости</label>
+                    <input class="visually-hidden filter__form__option_checkbox" type="checkbox" name="news" id="news" checked>
+                    <label class="filter__form__option__label_checkbox" for="news">Новости</label>
                   </li>
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option__checkbox" type="checkbox" name="gallery" id="gallery">
-                    <label class="filter__form__option__label" for="gallery">Галерея</label>
+                    <input class="visually-hidden filter__form__option_checkbox" type="checkbox" name="gallery" id="gallery">
+                    <label class="filter__form__option__label_checkbox" for="gallery">Галерея</label>
                   </li>
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option__checkbox" type="checkbox" name="trash" id="trash">
-                    <label class="filter__form__option__label" for="trash">Корзина</label>
+                    <input class="visually-hidden filter__form__option_checkbox" type="checkbox" name="trash" id="trash">
+                    <label class="filter__form__option__label_checkbox" for="trash">Корзина</label>
                   </li>
                 </ul>
 
@@ -93,7 +92,7 @@
             <h2 class="visually-hidden">Каталог товаров</h2>
             <div class="sort">
               <div class="sort__column">
-                <span class="sort__column__name">Сортировать</span>
+                <span class="sort__column__name">Сортировать:</span>
               </div>
               <div class="sort__column">
                 <ul class="sort__column__list">
@@ -108,8 +107,8 @@
               </div>
             <ul class="cards__list">
               <li class="cards__item item-sedona">
-                <img src="img/browser.svg" alt="Браузер" width="180" height="20">
-                <img src="img/sedona-catalog.jpg" alt="Седона" width="180" height="288">
+                <svg class="cards__item__browser" xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#ededed" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                <img src="img/sedona-catalog.jpg" alt="Седона" width="360" height="576">
                 <div class="cards__item__description">
                   <h3 class="cards__item__description__header"><a class="cards__item__description__link" href="#">Sedona</a></h3>
                   <p class="cards__item__description__text">Информационный сайт для туристов</p>
@@ -117,8 +116,8 @@
                 </div>
               </li>
               <li class="cards__item item-pink">
-                <img src="img/browser.svg" alt="Браузер" width="180" height="20">
-                <img src="img/pink-catalog.jpg" alt="Пинк" width="180" height="288">
+                <svg class="cards__item__browser" cards__item__browserxmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#ededed" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                <img src="img/pink-catalog.jpg" alt="Пинк" width="360" height="576">
                 <div class="cards__item__description">
                   <h3 class="cards__item__description__header"><a class="cards__item__description__link" href="#">Pink App</a></h3>
                   <p class="cards__item__description__text">Продуктовый лендинг приложения для iOS и Android</p>
@@ -126,8 +125,8 @@
                 </div>
               </li>
               <li class="cards__item item-barbershop">
-                <img src="img/browser.svg" alt="Браузер" width="180" height="20">
-                <img src="img/barbershop-catalog.jpg" alt="Барбершоп" width="180" height="288">
+                <svg class="cards__item__browser" xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#ededed" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                <img src="img/barbershop-catalog.jpg" alt="Барбершоп" width="360" height="576">
                 <div class="cards__item__description">
                   <h3 class="cards__item__description__header"><a class="cards__item__description__link" href="#">Barbershop</a></h3>
                   <p class="cards__item__description__text">Сайт салоны красоты. Для мужчин, да.</p>
@@ -135,8 +134,8 @@
                 </div>
               </li>
               <li class="cards__item item-mishka">
-                <img src="img/browser.svg" alt="Браузер" width="180" height="20">
-                <img src="img/mishka-catalog.jpg" alt="Мишка" width="180" height="288">
+                <svg class="cards__item__browser" cards__item__browserxmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#ededed" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                <img src="img/mishka-catalog.jpg" alt="Мишка" width="360" height="576">
                 <div class="cards__item__description">
                   <h3 class="cards__item__description__header"><a class="cards__item__description__link" href="#">mishka</a></h3>
                   <p class="cards__item__description__text">Интернет-магазин вязаных игрушек</p>
@@ -144,8 +143,8 @@
                 </div>
               </li>
               <li class="cards__item item-aplus">
-                <img src="img/browser.svg" alt="Браузер" width="180" height="20">
-                <img src="img/aplus-catalog.jpg" alt="Аплус" width="180" height="288">
+                <svg class="cards__item__browser" cards__item__browserxmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#ededed" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                <img src="img/aplus-catalog.jpg" alt="Аплус" width="360" height="576">
                 <div class="cards__item__description">
                   <h3 class="cards__item__description__header"><a class="cards__item__description__link" href="#">A Plus</a></h3>
                   <p class="cards__item__description__text">Лендинг курсов повышения квалификации</p>
@@ -153,8 +152,8 @@
                 </div>
               </li>
               <li class="cards__item item-kvast">
-                <img src="img/browser.svg" alt="Браузер" width="180" height="20">
-                <img src="img/kvast-catalog.jpg" alt="Кваст" width="180" height="288">
+                <svg class="cards__item__browser" cards__item__browserxmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40"><path fill="#ededed" d="M356 0H4C1.8 0 0 1.8 0 4v36h360V4c0-2.2-1.8-4-4-4zM22.991 27a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm23.011 0a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+                <img src="img/kvast-catalog.jpg" alt="Кваст" width="360" height="576">
                 <div class="cards__item__description">
                   <h3 class="cards__item__description__header"><a class="cards__item__description__link" href="#">Кваст</a></h3>
                   <p class="cards__item__description__text">Промо-сайт производителя крафтового кваса</p>
@@ -185,6 +184,28 @@
           <p class="map__description__phone">тел. +7 (812) 275-75-75</p>
           <button class="map__description__button" type="button">Напишите нам</button>
         </div>
+        <div class="modal-write">
+            <form class="modal-write__form" action="https://echo.htmlacademy.ru" method="post">
+              <h2 class="modal-write__header">Напишите нам</h2>
+                <div class="modal-write__first-row">
+                  <div class="modal-write__first-row__container">
+                    <label class="modal-write__label" for="name">Ваше имя:</label>
+                    <input class="modal-write__input" type="text" name="name" id="name" placeholder="Имя Фамилия">
+                  </div>
+                  <div class="modal-write__first-row__container">
+                    <label class="modal-write__label" for="name">Ваш e-mail:</label>
+                    <input class="modal-write__input" type="text" name="e-mail" id="e-mail" placeholder="email@example.com">
+                  </div>
+                </div>
+
+                <div class="modal-write__second-row">
+                  <label class="modal-write__label" for="comment">Текст письма:</label>
+                  <input class="modal-write__input" type="text" name="comment" id="comment" placeholder="В свободной форме">
+                </div>
+
+                <button class="modal-write__button" type="submit">Отправить</button>
+            </form>
+          </div>
       </section>
 
     </main>
@@ -209,20 +230,7 @@
 
   </div>
 
-  <section class="modal-write">
-    <h2 class="modal-write__header">Напишите нам</h2>
-    <label class="modal-write__label" for="name">Ваше имя:</label>
-    <input class="modal-write__input" type="text" name="name" id="name" placeholder="Имя Фамилия">
-
-    <label class="modal-write__label" for="e-mail">Ваш e-mail:</label>
-    <input class="modal-write__input" type="text" name="e-mail" id="e-mail" placeholder="email@example.com">
-
-    <label class="modal-write__label" for="comment">Текст письма:</label>
-    <input class="modal-write__input" type="text" name="comment" id="comment" placeholder="В свободной форме">
-
-    <button class="modal-write__button" type="submit">Отправить</button>
-
-  </section>
+  <script src="./js/scripts.js"></script>
 </body>
 
 </html>

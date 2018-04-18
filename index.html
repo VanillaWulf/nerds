@@ -141,6 +141,28 @@
           <p class="map__description__phone">тел. +7 (812) 275-75-75</p>
           <button class="map__description__button" type="button">Напишите нам</button>
         </div>
+        <div class="modal-write">
+            <form class="modal-write__form" action="https://echo.htmlacademy.ru" method="post">
+              <h2 class="modal-write__header">Напишите нам</h2>
+                <div class="modal-write__first-row">
+                  <div class="modal-write__first-row__container">
+                    <label class="modal-write__label" for="name">Ваше имя:</label>
+                    <input class="modal-write__input" type="text" name="name" id="name" placeholder="Имя Фамилия">
+                  </div>
+                  <div class="modal-write__first-row__container">
+                    <label class="modal-write__label" for="name">Ваш e-mail:</label>
+                    <input class="modal-write__input" type="text" name="e-mail" id="e-mail" placeholder="email@example.com">
+                  </div>
+                </div>
+
+                <div class="modal-write__second-row">
+                  <label class="modal-write__label" for="comment">Текст письма:</label>
+                  <input class="modal-write__input" type="text" name="comment" id="comment" placeholder="В свободной форме">
+                </div>
+
+                <button class="modal-write__button" type="submit">Отправить</button>
+            </form>
+          </div>
       </section>
 
     </main>
@@ -164,22 +186,6 @@
     </footer>
 
   </div>
-
-  <section class="modal-write">
-    <form class="modal-write__form" action="https://echo.htmlacademy.ru" method="post">
-      <h2 class="modal-write__header">Напишите нам</h2>
-        <label class="modal-write__label" for="name">Ваше имя:</label>
-        <input class="modal-write__input" type="text" name="name" id="name" placeholder="Имя Фамилия">
-
-        <label class="modal-write__label" for="name">Ваш e-mail:</label>
-        <input class="modal-write__input" type="text" name="e-mail" id="e-mail" placeholder="email@example.com">
-
-        <label class="modal-write__label" for="comment">Текст письма:</label>
-        <input class="modal-write__input" type="text" name="comment" id="comment" placeholder="В свободной форме">
-
-        <button class="modal-write__button" type="submit">Отправить</button>
-    </form>
-  </section>
 
 </body>
 
