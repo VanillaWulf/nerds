@@ -13,7 +13,7 @@
     <header class="header">
       <div class="header__logo">
         <a class="header__logo__link" href="index.html">
-          <img src="img/nerds-logo.svg" alt="Логотип Nerds" width="160" height="62">
+          <img src="img/nerds-logo.svg" alt="Логотип Nerds" width="168" height="62">
         </a>
       </div>
       <nav class="header__navigation">
@@ -36,28 +36,43 @@
           <section class="filter">
             <h2 class="visually-hidden">Фильтр по каталог</h2>
             <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
-              <span class="sort__column__name">Стоимость:</span>
-
-
+              <!--<span class="sort__column__name">Стоимость:</span>-->
               <fieldset class="filter__form__fieldset">
+                  <legend class="filter__form__legend">Стоимость:</legend>
+                  <div class="filter__form__range">
+                    <div class="filter__form__range__range-controls">
+                      <div class="range-controls__scale">
+                        <div class="range-controls__scale__bar" style="margin-left: 20%; width: 30%"></div>
+                      </div>
+                      <div class="filter__form__fieldset__toggle range-controls__toggle-min"></div>
+                      <div class="filter__form__fieldset__toggle range-controls__toggle-max"></div>
+                    </div>
+                    <div class="filter__form__range__price-controls">
+                      <label class="price-controls__label">от <input class="price-controls__input" name="min-price" type="text" value="0"></label>
+                      <label class="price-controls__label price-controls__max-price">до <input class="price-controls__input" name="max-price" type="text" value="15000"></label>
+                    </div>
+                  </div>
+              </fieldset>
+
+              <fieldset class="filter__form__fieldset fieldset-grid">
                 <legend class="filter__form__legend">сетка:</legend>
                 <ul class="filter__form__list greed_option">
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option_radio" type="radio" name="adaptive" id="adaptive" checked>
+                    <input class="visually-hidden filter__form__option_radio" type="radio" name="grid" id="adaptive" checked>
                     <label class="filter__form__option__label_radio" for="adaptive">Адаптивная</label>
                   </li>
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option_radio" type="radio" name="fix" id="fix">
+                    <input class="visually-hidden filter__form__option_radio" type="radio" name="grid" id="fix">
                     <label class="filter__form__option__label_radio" for="fix">Фиксированная</label>
                   </li>
                   <li class="filter__form__option">
-                    <input class="visually-hidden filter__form__option_radio" type="radio" name="gum" id="gum">
+                    <input class="visually-hidden filter__form__option_radio" type="radio" name="grid" id="gum">
                     <label class="filter__form__option__label_radio" for="gum">Резиновая</label>
                   </li>
                 </ul>
               </fieldset>
 
-              <fieldset class="filter__form__fieldset">
+              <fieldset class="filter__form__fieldset fieldset-features">
                 <legend class="filter__form__legend">особенности:</legend>
                 <ul class="filter__form__list features_option">
                   <li class="filter__form__option">
@@ -91,18 +106,19 @@
           <section class="cards">
             <h2 class="visually-hidden">Каталог товаров</h2>
             <div class="sort">
-              <div class="sort__column">
+              <div class="sort__column column-name">
                 <span class="sort__column__name">Сортировать:</span>
               </div>
-              <div class="sort__column">
+              <div class="sort__column column-list">
                 <ul class="sort__column__list">
-                    <li><a class="sort__column__item__link active-sort" href="#">По цене</a></li>
-                    <li><a class="sort__column__item__link" href="#">По типу</a></li>
-                    <li><a class="sort__column__item__link" href="#">По рейтингу</a></li>
+                    <li class="sort__column__item"><a class="sort__column__item__link active-sort" href="#">По цене</a></li>
+                    <li class="sort__column__item"><a class="sort__column__item__link" href="#">По типу</a></li>
+                    <li class="sort__column__item"><a class="sort__column__item__link" href="#">По рейтингу</a></li>
                   </ul>
                 </div>
-                <div class="sort__column">
-                  <!--стрелочки-->
+                <div class="sort__column column-up-down">
+                  <svg class="sort__column__sort-down column-up-down_active" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#a6a6a6" d="M5.5 0L0 10h11z"/></svg>
+                  <svg class="sort__column__sort-up" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#a6a6a6" d="M5.5 0L0 10h11z"/></svg>
                 </div>
               </div>
             <ul class="cards__list">
@@ -162,11 +178,11 @@
               </li>
             </ul>
 
-            <ul class="cards__paginatrion-list">
-              <li class="cards__paginatrion-item pagination-item-current">1</li>
-              <li class="cards__paginatrion-item"><a class="cards__paginatrion-item__link" href="#">2</a></li>
-              <li class="cards__paginatrion-item"><a class="cards__paginatrion-item__link" href="#">3</a></li>
-              <li class="cards__paginatrion-item pagination-item-next"><a class="cards__paginatrion-item__link" href="#">следующая</a></li>
+            <ul class="cards__pagination-list">
+              <li class="cards__pagination-item pagination-item-current">1</li>
+              <li class="cards__pagination-item"><a class="cards__pagination-item__link" href="#">2</a></li>
+              <li class="cards__pagination-item"><a class="cards__pagination-item__link" href="#">3</a></li>
+              <li class="cards__pagination-item pagination-item-next"><a class="cards__pagination-item__link" href="#">следующая</a></li>
             </ul>
 
           </section>
@@ -200,7 +216,7 @@
 
                 <div class="modal-write__second-row">
                   <label class="modal-write__label" for="comment">Текст письма:</label>
-                  <input class="modal-write__input" type="text" name="comment" id="comment" placeholder="В свободной форме">
+                  <textarea class="modal-write__textarea" type="text" name="comment" id="comment" placeholder="В свободной форме"></textarea>
                 </div>
 
                 <button class="modal-write__button" type="submit">Отправить</button>

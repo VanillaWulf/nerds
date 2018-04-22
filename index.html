@@ -30,7 +30,13 @@
     <main>
       <section class="main-image">
         <h2 class="visually-hidden">Слайдер</h2>
-        <div class="main-image__slider slider_1">
+        <div class="main-image__slider-controls">
+          <i class="main-image__slider-controls__trigger active-trigger"></i>
+          <i class="main-image__slider-controls__trigger"></i>
+          <i class="main-image__slider-controls__trigger"></i>
+        </div>
+        <ul class="main-image__slider__slider-list">
+        <li class="main-image__slider__slider-item">
           <div class="main-image__slider__descr">
             <h3 class="main-image__slider__header">Долго, дорого, скрупулезно.</h3>
             <p class="main-image__slider__text">Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
@@ -39,8 +45,8 @@
           <div class="main-image__slider__image">
             <img src="img/slide-1.png" alt="Слайдер-1" width="698" height="412">
           </div>
-        </div>
-        <div class="main-image__slider slider_2">
+        </li>
+        <li class="main-image__slider__slider-item">
           <div class="main-image__slider__descr">
             <h3 class="main-image__slider__header">Любим математику как никто другой.</h3>
             <p class="main-image__slider__text">Никакого креатива,только математические формулы для расчета идеальных пропорций.</p>
@@ -49,8 +55,8 @@
             <div class="main-image__slider__image">
               <img src="img/slide-2.png" alt="Слайдер-2" width="698" height="412">
             </div>
-          </div>
-        <div class="main-image__slider slider_3">
+          </li>
+        <li class="main-image__slider__slider-item">
           <div class="main-image__slider__descr">
             <h3 class="main-image__slider__header">Только ночь, только хардкор</h3>
             <p class="main-image__slider__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
@@ -59,7 +65,7 @@
           <div class="main-image__slider__image">
             <img src="img/slide-3.png" alt="Слайдер-3" width="698" height="412">
           </div>
-        </div>
+        </li>
 
       </section>
 
@@ -157,7 +163,7 @@
 
                 <div class="modal-write__second-row">
                   <label class="modal-write__label" for="comment">Текст письма:</label>
-                  <input class="modal-write__input" type="text" name="comment" id="comment" placeholder="В свободной форме">
+                  <textarea class="modal-write__textarea" type="text" name="comment" id="comment" placeholder="В свободной форме"></textarea>
                 </div>
 
                 <button class="modal-write__button" type="submit">Отправить</button>
