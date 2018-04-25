@@ -3,7 +3,8 @@
 <head>
     <meta charset='utf-8'>
     <title>Nerds</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <!--  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+-->
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -145,12 +146,13 @@
           <h3 class="map__description__header">nёrds design studio</h3>
           <p class="map__description__adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <p class="map__description__phone">тел. +7 (812) 275-75-75</p>
-          <button class="map__description__button" type="button">Напишите нам</button>
+          <a href="#" class="map__description__button">Напишите нам</a>
         </div>
         <div class="modal-write">
             <form class="modal-write__form" action="https://echo.htmlacademy.ru" method="post">
+              <button class="modal-write__form__modal-close-button" type="button">Закрыть</button>
               <h2 class="modal-write__header">Напишите нам</h2>
-                <div class="modal-write__first-row">
+                 <div class="modal-write__first-row">
                   <div class="modal-write__first-row__container">
                     <label class="modal-write__label" for="name">Ваше имя:</label>
                     <input class="modal-write__input" type="text" name="name" id="name" placeholder="Имя Фамилия">
@@ -192,7 +194,63 @@
     </footer>
 
   </div>
+  <script>
+    let form = document.querySelector('.modal-write__form');
 
+    let formOpenButton = document.querySelector('.map__description__button');
+    let formCloseButton = document.querySelector('.modal-write__form__modal-close-button');
+
+    let name = form.querySelector('[name=name]');
+    let eMail = form.querySelector('[name=e-mail]');
+    let comment = form.querySelector('[name=commet]');
+
+    let formWindow = document.querySelector('.modal-write');
+
+    formOpenButton.addEventListener('click', function(evt){
+      evt.preventDefault();
+      formWindow.classList.add("modal-write__form_open");
+      name.focus();
+    });
+
+    formCloseButton.addEventListener('click',function(evt) {
+      evt.preventDefault();
+      formWindow.classList.remove("modal-write__form_open");
+      name.classList.remove('modal-write__form__eror');
+      eMail.classList.remove('modal-write__form__eror');
+    });
+
+    window.addEventListener('keydown',function(evt){
+      if(evt.keyCode === 27){
+        evt.preventDefault();
+        if(formWindow.classList.contains('modal-write__form_open')){
+          formWindow.classList.remove('modal-write__form_open');
+          name.classList.remove('modal-write__form__eror');
+          eMail.classList.remove('modal-write__form__eror');
+        }
+      };
+    });
+
+    function removeInputClasses(){
+      name.classList.remove('modal-write__form__eror');
+      eMail.classList.remove('modal-write__form__eror');
+      console.log(1123);
+    }
+
+    form.addEventListener('submit',function(evt){
+      if(!name.value){
+        evt.preventDefault();
+        name.classList.add('modal-write__form__eror');
+      }
+      if(!eMail.value ){
+        evt.preventDefault();
+        eMail.classList.add('modal-write__form__eror');
+      }
+
+      setTimeout(removeInputClasses,800);
+    });
+
+
+  </script>
 </body>
 
 </html>
