@@ -1,8 +1,8 @@
 body{
   margin: 0;
   padding: 0;
-  /*font-family: 'Roboto', 'Arial', sans-serif;*/
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  //font-family: 'Arial', sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #000000;
@@ -170,22 +170,43 @@ body{
 .description__words__item{
   line-height: 24px;
   text-transform: none;
+  position: relative;
+}
+
+.description__words__item::before{
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 25px;
+  background-color: red;
+  bottom: 50%;
+  left: -40px;
 }
 
 .description__visual__header{
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
+  margin-bottom: 35px;
 }
 
-.description__visual__item_percent{
+.description__visual__item__percent{
   font-size: 45px;
-  line-height: 10px;
+  line-height: 40px;
+  font-weight: 800;
+  text-transform: none;
+  margin:0px;
+  padding: 0px;
+}
+
+.description__visual__item__text{
   text-transform: none;
 }
 
-.description__visual__item_text{
-  text-transform: none;
+.description__visual__item__percent_upper{
+  font-size: 25px;
+  line-height: 50px;
+  vertical-align: bottom;
 }
 
 .map__description__header{
@@ -414,6 +435,11 @@ body{
   background-position: 0 0;
 }
 
+.navigation__item__link:hover .navigation__item:nth-child(5)::before{
+  background-color: red;
+  width: 500px;
+}
+
 .main-image{
   max-height: 412px;
   margin-bottom: 78px;
@@ -616,11 +642,11 @@ body{
   text-align: left;
 }
 
-.description__visual__item_percent{
-  margin-bottom: 34px;
+.description__visual__item__percent{
+  margin-bottom: 24px;
 }
 
-.description__visual__item_text{
+.description__visual__item__text{
   margin-top: 0px;
 }
 
@@ -656,11 +682,29 @@ body{
   padding-top: 50px;
   padding-bottom: 38px;
   width: 25%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.clients__item:nth-child(-n+3)::after{
+  width: 2px;
+  position: absolute;
+  height: 50px;
+  content: '';
+  background-color: #ededed;
+  right: 0%;
+  top: 35%;
 }
 
 .clients__item__link{
-  display: inline-block;
+  display: flex;
   min-height: 90px;
+  align-items: center;
+}
+
+.clients__item__image{
+  display: inline-block;
 }
 
 .clients__item__border{
@@ -1076,6 +1120,7 @@ body{
 .filter__form__option{
   opacity: 0.4;
   margin-bottom: 20px;
+  max-width: 40%;
 }
 
 .filter__form__option:hover{
